@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicholas Rooks">
+    <meta name="keywords" content="html">
+    <meta name="description" content="HW1 First html page">
+    <title>Home</title>
+    <script>
+
+        function getTimeDiff(date1, date2){
+            var d1 = new Date(date1);
+            var d2 = new Date(date2);
+            var diff = Math.abs(d1.getTime() - d2.getTime())/1000;
+            return diff;
+        }
+
+        function runningclock(){
+            var c = document.getElementById('count');
+
+            //update the clock every second
+            setInterval(updateTime, 1000);
+            
+            function updateTime(){
+                var d = new Date("2024-07-04");
+                var curr = new Date();
+
+                var diff = getTimeDiff(d, curr);
+
+                // Calculate milliseconds in a day
+                const minute = 60;
+                const hour = minute * 60;
+                const day = hour * 24;
+
+                var days = (diff/day).toFixed(0);
+                var hours = d.getHours();
+                var  minutes = d.getMinutes();
+                var seconds = d.getSeconds();
+                var secondsfixed = seconds;
+                
+
+                
+
+                if (seconds<10)
+                    secondsfixed = "0" + seconds
+
+                c.innerHTML = days + " DAYS " + hours + " HOURS " + minutes + " MINUTES " + secondsfixed + " SECONDS";
+            }
+
+        }
+        document.addEventListener("DOMContentLoaded",runningclock,false);
+    </script>
+</head>
+<body>
+    <h1>Welcome to my Homepage!</h1>
+    <p>
+        <ul>
+            <li><a href="index.html#myself">A little about myself</a></li>
+            <li><a href="index.html#hobbies">Hobbies</a></li>
+        </ul>
+    </p>
+    <br>
+    <p>
+        Time until Independence day:
+    </p>
+    <p id="count">00 DAYS 00 HOURS 00 MINUTES 00 SECONDS</p>
+    <p>
+        <h2 id="myself">A little about myself...</h2>
+        <p>I am currently a senior in BIT-DSS and am very excited about what this course
+            Might be able to teach me! I like web development in my free time as well as some
+            light programming projects.
+        </p>
+    </p>
+    <br>
+    <p>
+        <h2 id="hobbies">Some of my hobbies...</h2>
+        <p>
+            I like to think that I have a lot of different hobbies over the years. I recall that I started programming senior year of highschool.
+            I also learned how to drive a stick-shift car and was pretty good a the yoyo.
+            Currently I find cybersecurity and IT very intriguing and love solving puzzles and problems. 
+            I am also a well traveled person having lived in several different countries over the course of my life.
+        </p>
+    </p>
+    <a href="https://www.linkedin.com/in/nicholas-rooks/"><img src="vt1.png" height="300" width="500"></a>
+    <br>
+    <ol><strong>Top 5 Favorite video games</strong>
+        <li>Risk of Rain Returns</li>
+        <li>BattleFront 2 (2017)</li>
+        <li>Call of Duty: Black Ops 3</li>
+        <li>Fortnite....</li>
+        <li>Dark Souls 3</li>
+    </ol>
+</body>
+<footer>
+    <p>&copy;2023 Nicholas Rooks All rights Reserved</p>
+</footer>
+</html>

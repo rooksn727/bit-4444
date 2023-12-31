@@ -16,7 +16,9 @@
     }
 
     function init(){
-      
+      document.images[0].addEventListener("mouseover",imageOver, false);
+      //image over is the action that specifies what we do when we mouseover
+      document.images[0].addEventListener("mouseout", imageOut, false);
     }
 
     function leaveAlert(e){

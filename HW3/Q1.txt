@@ -1,0 +1,23 @@
+6. function hello(){
+return 'Hello world!';
+}
+
+7. function a(){return 'Hello a!';}
+function b(){return 'Hello b!';}
+
+8. function greet(){return 'Haydo!';}
+var salutation = greet();
+
+9.'Hi!'
+
+10. function echo(input){return input;}
+
+11. 'How do you do?'
+
+12. function greet(input){return 'Hello ' + input + '!';}
+
+13. 'Where is Jacky?'
+
+14. 'Hi Selva! Hi Pola!'
+
+15. function log() {console.log('Hello Console!');}

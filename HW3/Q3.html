@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicholas Rooks">
+    <meta name="keywords" content="html">
+    <meta name="description" content="HW1 First html page">
+    <title>Home</title>
+    <script>
+        
+        //alert function
+        function leavePage(){
+            alert("You are about to leave the page!");
+        }
+
+        //change on mouse over
+        function imageOver(){
+            document.getElementById("bitclubPic").src="bitClub2.jpeg";
+        }
+
+        //change on mouseout
+        function imageOut(){
+            document.getElementById("bitclubPic").src="bitClub1.jpeg";
+        }
+
+        //init
+        function init(){
+            //alert
+            document.getElementById("leaving").addEventListener("click",leavePage,false);
+            //mouse over
+            document.images[1].addEventListener("mouseover", imageOver, false);
+            document.images[1].addEventListener("mouseout", imageOut, false);
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <h1>Welcome to my Homepage!</h1>
+    <p>
+        <ul>
+            <li><a href="index.html#myself">A little about myself</a></li>
+            <li><a href="index.html#hobbies">Hobbies</a></li>
+            <li id="leaving"><a href="https://www.vt.edu/">VT home Page</a></li>
+        </ul>
+    </p>
+    <br>
+    <p>
+        <h2 id="myself">A little about myself...</h2>
+        <p>I am currently a senior in BIT-DSS and am very excited about what this course
+            Might be able to teach me! I like web development in my free time as well as some
+            light programming projects.
+        </p>
+    </p>
+    <br>
+    <p>
+        <h2 id="hobbies">Some of my hobbies...</h2>
+        <p>
+            I like to think that I have a lot of different hobbies over the years. I recall that I started programming senior year of highschool.
+            I also learned how to drive a stick-shift car and was pretty good a the yoyo.
+            Currently I find cybersecurity and IT very intriguing and love solving puzzles and problems. 
+            I am also a well traveled person having lived in several different countries over the course of my life.
+        </p>
+    </p>
+    <a href="https://www.linkedin.com/in/nicholas-rooks/"><img src="vt1.png" height="300" width="500"></a>
+    <br>
+    <ol><strong>Top 5 Favorite video games</strong>
+        <li>Risk of Rain Returns</li>
+        <li>BattleFront 2 (2017)</li>
+        <li>Call of Duty: Black Ops 3</li>
+        <li>Fortnite....</li>
+        <li>Dark Souls 3</li>
+    </ol>
+    <h1 style="text-align: center;">BIT CLUB</h1>
+    <br>
+    <img id="bitclubPic" src="bitClub1.jpeg" style="width: 70%;
+    object-fit: cover;
+    z-index: -1;
+    margin: 5% 10% 5% 10%;
+    align-items: center;">
+</body>
+<footer>
+    <p>&copy;2023 Nicholas Rooks All rights Reserved</p>
+</footer>
+</html>

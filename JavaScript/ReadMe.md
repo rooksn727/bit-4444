@@ -346,7 +346,7 @@ The Complete Script will look like this:
         function init(){
             document.images[0].addEventListener("mouseover",imageOver, false);
             //image over is the action that specifies what we do when we mouseover
-            document.images[0].addEventListner("mouseout", imageOut, false);
+            document.images[0].addEventListener("mouseout", imageOut, false);
         }
 
         //the paramaters are type, init is for initializing and false is the boolean

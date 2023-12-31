@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Registration</title>
+</head>
+<form>
+    <h1>Friends Registration Form</h1>
+    <ul>
+        <li><a href="index.html">Home Page</a></li>
+    </ul>
+    <br>
+    <form action="/HW1/index.html" method="get"></form>
+        <section id="1">
+            <p>
+                <label>Name:</label>
+                <input type="text" name="Name" size="25" autofocus/>
+            </p>
+            <p>
+                <label>Favorite Password:</label>
+                <input type="password" name="password"/>
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" name="email" size="30" autocomplete="on"/>
+            </p>
+            <p>
+                <label>Phone number:</label>
+                <input type="tel"placeholder = "(###) ###-####"
+                pattern = "\(\d{3}\) +\d{3}-\d{4}" required />
+            </p>
+        </section>
+        <section>
+            <p>
+                <fieldset>
+                    <legend> Days Available</legend>
+                    <label>Monday
+                        <input name="Mon" type="checkbox" value="M" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Tuesday
+                        <input name="Tues" type="checkbox" value="T" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Wednesday
+                        <input name="Wed" type="checkbox" value="W"style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Thursday
+                        <input name="Thurs" type="checkbox" value="TH" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Friday
+                        <input name="Fri" type="checkbox" value="F" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Saturday
+                        <input name="Sat" type="checkbox" value="SA" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                    <label>Sunday
+                        <input name="Sun" type="checkbox" value="SU" style="height:30px; vertical-align: middle;"/>
+                    </label>
+                </fieldset>
+            </p>
+        </section>
+        <p>
+            <label>BirthDate</label>
+            <input type="date">
+        </p>
+        <p><label>Scale 1-100 how much do you like star wars</label><br>
+            0
+            <input type="range"
+            min="0"
+            max="100"
+            value="70">100
+        </p>
+        <p>
+            <label>Enter your Favorite pin number</label>
+            <input type="number"
+            min="0000"
+            max="9999"
+            value="0"
+            autocomplete="on">
+        </p>
+        <p>
+            <p>Lease favorite time of the day:</p>
+            <select name="time" id="time">
+                <option>Dawn</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Dusk</option>
+                <option>Night</option>
+            </select>
+        </p>
+        </p>
+            <input type = "submit" value="Submit" />
+            <input type="reset" value="Clear" />
+        </p>
+    </form>
+
+</body>
+</html>

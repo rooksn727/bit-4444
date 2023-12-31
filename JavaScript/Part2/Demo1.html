@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Calculate BMI</title>
+  <script>
+    //calculate BMI= weight*703/(height^2)
+    function calcBMI(weight, height){
+      var bmi = weight*703/(Math.pow(height,2));
+      return bmi;
+    }
+
+   
+
+    //var responseBMI = calcBMI(personweight, personheight);
+
+    document.writeln("Your BMI value is " + calcBMI(personweight, personheight));
+    
+  </script>
+</head>
+<body>
+
+ </body>
+</html>

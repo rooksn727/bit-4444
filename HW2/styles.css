@@ -1,0 +1,74 @@
+#para {
+    border-color: #ffa07a;
+    border-style: groove;
+    border-width: 5px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(251, 230, 127);
+    box-shadow: 10px 15px #f8652b;
+    width: fit-content;
+}
+
+nav {
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid teal;
+    background-color: orange;
+    width: 10em;
+    text-align: center;
+}
+nav ul{
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav:hover ul {display: block;}
+nav ul li{
+    border: 2px solid teal;
+    background-color: orange;
+    width: 10em;
+    color: black;
+}
+nav ul li:hover{background-color: powderblue;}
+a {text-decoration: none;}
+nav:hover{
+    background-color: teal;
+}
+div{
+    height: 300px;
+}
+
+.arrow{
+    position: relative;
+    -webkit-animation: movingimage linear 10s 1s 2 ;
+    -moz-animation: movingimage linear 10s 1s 2;
+    animation: movingimage linear 10s 1s 2;
+}
+@-webkit-keyframes movingimage
+{
+    0% {opacity: 1; left: 100px; top: 0px}
+    25% {opacity: 1; left: 0px; top:0px}
+    50% {opacity: 1; left: 0px; top: 100px}
+    75% {opacity: 1; left: 100px; top: 100px}
+    100% {opacity: 1; left: 100px; top: 0px}
+}
+@-moz-keyframes movingimage 
+{
+    0% {opacity: 1; left: 100px; top: 0px}
+    25% {opacity: 1; left: 0px; top:0px}
+    50% {opacity: 1; left: 0px; top: 100px}
+    75% {opacity: 1; left: 100px; top: 100px}
+    100% {opacity: 1; left: 100px; top: 0px}
+}
+
+@keyframes movingimage{
+    0% {opacity: 1; left: 100px; top: 0px}
+    25% {opacity: 1; left: 0px; top:0px}
+    50% {opacity: 1; left: 0px; top: 100px}
+    75% {opacity: 1; left: 100px; top: 100px}
+    100% {opacity: 1; left: 100px; top: 0px}
+}

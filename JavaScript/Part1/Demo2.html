@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>Greeting by time</title>
+  <script>
+    //get current time
+    var now = new Date();
+    //get the hour of the current time
+    var nowHour = now.getHours();
+
+    console.log("The current hour is" + nowHour);
+
+    //if the hour is less than 12, we say good morning, other wise, say good afternoon.
+    if(nowHour<12)
+      document.writeln("Good morning!");
+      else
+        document.writeln("Good afternoon!");
+
+  </script>
+</head>
+<body>
+<h1>BIT444 Students!</h1>
+</body>
+</html>

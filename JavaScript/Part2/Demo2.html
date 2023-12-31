@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>JavaScript Event Demo</title>
+  <style>
+    p {text-align: center};
+  </style>
+  <script>
+
+    function imageOver(){
+      document.images[0].src="vt2.jpeg";
+    }
+
+    function imageOut(){
+      document.images[0].src="vt1.png";
+    }
+
+    function init(){
+      
+    }
+
+    function leaveAlert(e){
+      if(!confirm("Please confirm leaving this page"))
+        e.preventDefault();
+    }
+
+    window.addEventListener("load",init,false);
+  </script>
+</head>
+<body>
+<a href="http://www.vt.edu"><p><img src="vt1.png" /></p></a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>JavaScript Demo 4</title>
+  <script>
+    var grade=0;
+    var sum=0;
+    var counter=0;
+
+    //get all grades from the user
+    do {
+      grade = Number(window.prompt("Enter a student grade (Enter -1 to end): ", "-1"));
+      console.log("grade="+grade);
+      if(grade>=0) {
+        counter++;
+        sum += grade;
+        console.log("counter="+counter);
+        console.log("sum="+sum);
+      }
+    } while(grade>=0);
+
+    //calculate the average
+    var gpa = sum/counter;
+
+    //display the gpa
+    window.alert("The class GPA is " + gpa);
+  </script>
+</head>
+
+</html>

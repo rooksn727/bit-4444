@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>running clock demo</title>
+  <script>
+    function runningclock(){
+      var c = document.getElementById('current-time');
+
+      //update the clock every second
+      setInterval(updateTime, 1000);
+
+      function updateTime(){
+        var d = new Date();
+
+        
+      }
+    }
+    document.addEventListener("DOMContentLoaded",runningclock,false);
+  </script>
+</head>
+
+<body>
+<p id="current-time">00:00:00</p>
+</body>
+
+</html>

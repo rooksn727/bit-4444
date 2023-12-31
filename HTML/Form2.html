@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Forms</title>
+    </head>
+
+    <body>
+        <h1>Feedback Form</h1>
+        <p>Please fill out this form to help 
+            us improve our site.</p>
+        <form method = "post" action = "http://www.deitel.com">
+            <p>
+                <input type = "hidden" name = "recipient"
+                value = "deitel@deital.com"/>
+
+                <input type="hidden" name = "Subject"
+                value="Feedback Form"/>
+
+                <input type="hidden" name = "redirect"
+                value="main.html"/>
+            </p>
+            <p>
+                <label>Name:</label>
+                <input name = "name" type="text" size="25"/>
+            </p>
+            <p>
+                <label>Comments:<br>
+                    <textarea name="Comments"
+                    rows="4 " cols="36">Enter Text Here</textarea>
+                </label>
+            </p>
+            <p>
+                <label>Email Address:
+                    <input name="email" type="password" size="25"/>
+                </label>
+            </p>
+            <p>
+                <strong>Things you liked</strong> <br>
+                <label>Site Design
+                    <input name="Thingsliked" type="checkbox" value="design"/>
+                </label>
+                <label>Links
+                    <input name="Links" type="checkbox" value="links"/>
+                </label>
+                <label>Ease of use
+                    <input name="Usage" type="checkbox" value="Usage"/>
+                </label>
+                <label>Images
+                    <input name="Img" type="checkbox" value="Img"/>
+                </label>
+            </p>
+            <p>
+                <strong>How did you get to our website?</strong> <br>
+                <label>Search Engine
+                    <input name="howToSite" type="radio" value="search engine" checked="checked"/>
+                </label>
+                <label>Links from another site
+                    <input name="howToSite" type="radio" value="other site" />
+                </label>
+                <label>Deital Website
+                    <input name="howToSite" type="radio" value="Main website"/>
+                </label>
+                <label>Other
+                    <input name="howToSite" type="radio" value="Other"/>
+                </label>
+            </p>
+            <p>
+                <label>Rate our Site:
+                    <select name="ratings">
+                        <option>Good</option>
+                        <option>Meh</option>
+                        <option>Bad</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="submit"/>
+                <input type="reset" value="Clear"/>
+            </p>
+        </form>
+    </body>
+</html>

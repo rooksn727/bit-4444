@@ -25,27 +25,34 @@
             function updateTime(){
                 var d = new Date("2024-07-04");
                 var curr = new Date();
-
                 var diff = getTimeDiff(d, curr);
-
                 // Calculate milliseconds in a day
                 const minute = 60;
                 const hour = minute * 60;
                 const day = hour * 24;
-
-                var days = (diff/day).toFixed(0);
-                var hours = d.getHours();
-                var  minutes = d.getMinutes();
-                var seconds = d.getSeconds();
+                //calculate days and then subtract that amount from difference
+                var days = Math.floor(diff/day);
+                diff -= Math.floor(days*day);
+                var hours = Math.floor(diff/hour);
+                diff -= Math.floor(hours*hour);
+                var minutes = Math.floor(diff/minute);
+                diff -= Math.floor(minutes*minute);
+                var seconds = Math.floor(diff);
+                //fixed var
                 var secondsfixed = seconds;
-                
-
-                
-
+                var minutesfixed = minutes;
+                var hoursfixed = hours;
+                var daysfixed = days
                 if (seconds<10)
                     secondsfixed = "0" + seconds
+                if (minutes<10)
+                    minutesfixed = "0" + minutes
+                if (hours<10)
+                    hoursfixed = "0" + hours
+                if (days < 10)
+                    daysfixed = "0" + days
 
-                c.innerHTML = days + " DAYS " + hours + " HOURS " + minutes + " MINUTES " + secondsfixed + " SECONDS";
+                c.innerHTML = daysfixed + " DAYS " + hoursfixed + " HOURS " + minutesfixed + " MINUTES " + secondsfixed + " SECONDS";
             }
 
         }

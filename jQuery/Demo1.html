@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery Selector demo</title>
+      <script src="jquery-3.1.1.min.js"></script>
+      <script>
+        $(function(){
+          //1. $("p").css("color", "red");
+          //2. $("h1,h2").css("color", "red");
+          //3. $("#link").css("color", "red");
+          //4. $(".title").css("color", "red");
+          //5. $("h1.title").css("color", "red");
+          //6. $("*").css("color", "red");
+          //7. $("[href]").css("color", "red");
+          //8. $("[type='hidden']")
+          //9. $(":input").css("color", "red");
+          //10. $(":text").css("color", "red");
+          //11. $(":submit").css("color", "red");
+           //12.$(":input:first").css("color", "red");
+           //13.$(":input:last").css("color", "red");
+           //14.$(":input:gt(1)").css("color", "red");
+          //15. $("p:has(img)").css("color", "red");
+          //16. $("h2:contains(system)").css("color", "red");
+        })
+      </script>
+   </head>
+   <body>
+      <h1 class="title">Shopping list for Monday:</h1>
+
+      <ul>
+         <li class="nodec">Milk</li>
+         <li>Bread
+            <ul>
+               <li>White bread</li>
+               <li>Rye bread</li>
+               <li id="wholebread">Whole wheat bread</li>
+            </ul>
+         </li>
+         <li>Carrots</li>
+         <li>Yogurt</li>
+         <li>Pizza <em>with mushrooms</em></li>
+      </ul>
+
+      <p class="desc">
+        <img class="float" src="foreground_image.png" width="65" height="15"/>
+        The U.S. Environmental Protection Agency has recognized the company
+        with a 2015 ENERGY STAR Partner of the Year – Energy Management Award
+        for its outstanding efforts and actions to improve the energy
+        efficiency of its buildings and facilities.
+      </p>
+
+      <h2 class="title">Log in to the system</h2>
+
+      <form method="post" action="http://www.bit.vt.edu">
+        <input type="hidden" name="department" value="BIT" />
+        <input type="hidden" name="college" value="VT" />
+          <lable>Username:
+            <input name="username" type="text" size="20" />
+          </lable><br />
+          <label>Password:
+            <input name="password" type="password" size="20" />
+          </label>
+          <p>
+
+            Select all that apply to you: <br />
+            <label><input name="characters" type="checkbox" value="WorkHard"  /> Hard working
+            </label><br />
+            <label> <input name="characters" type="checkbox" value="creative" /> Creative
+            </label><br />
+            <label><input name="characters" type="checkbox" value="adorable" /> Adorable
+            </label>
+          </p>
+          <p>Student type:<br />
+          <label><input name="studenttype" type="radio" value="undergrad" /> Undergraduate
+          </label>
+          <label><input name="studenttype" type="radio" value="graduate" /> Graduate
+          </label>
+          </p>
+          <p>
+            <label>Planned graduation date:<br />
+              <input type="text" list="semesterlist">
+              <datalist id="semesterlist">
+                <option value="Spring, 2017"></option>
+                <option value="fall, 2017"></option>
+                <option value="Fall, 2017"></option>
+              </datalist>
+
+            </label>
+          </p>
+          <p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Clear" />
+          </p>
+      </form>
+
+      <p id="link"><em>Go to the</em>
+         <a class = "nodec" href = "http://www.deitel.com">
+            Grocery store</a>
+      </p>
+
+   </body>
+</html>
+
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

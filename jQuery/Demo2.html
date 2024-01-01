@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery running clock demo</title>
+	<style>
+		.red {color:red;}
+		.blue {color:blue;}
+		.green {color:green;}
+	</style>
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			setInterval(updateTime, 1000);
+
+			//color changing on click
+			$("#current-time").click(function(){
+				if($("#current-time").hasClass("red")) {
+					$("#current-time").removeClass("red").addClass("blue");
+				}
+				else if ($("#current-time").hasClass("blue")){
+					$("#current-time").removeClass("blue").addClass("green");
+				}
+				else if ($("#current-time").hasClass("green")){
+					$("#current-time").removeClass("green").addClass("red");
+
+				}
+				else{
+					$("#current-time").addClass("red");
+				}
+			})
+		})
+
+		function updateTime(){
+			var d = new Date();
+			var hours = d.getHours();
+			minutes = d.getMinutes();
+			seconds = d.getSeconds();
+			secondsFixed = seconds;
+
+			if(secondsFixed<10)
+				secondsFixed = "0" + seconds;
+			ampm = 'AM';
+
+			if(hours>12)
+				ampm='PM';
+
+			$("#current-time").text(hours + ":" + minutes + ":" + secondsFixed + " " + ampm);
+		}
+	</script>
+</head>
+<body>
+<p id="current-time">00:00:00</p>
+</body>
+</html>

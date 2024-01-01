@@ -36,16 +36,19 @@ Example of Baseball player structured in XML:
 </player>
 ```
 
-### **Document  Object Model** (or DOM):
+## **Document  Object Model** (or DOM):
 
 - hierarchical tree structure
 - top level is the document level
 - each element name is represented by node
     - can have parent and child nodes within each node
     - nodes can have siblings
+    - nodes in documents page make up page's DOM tree
 ![Alt text](DOMtreeStructure.png)
 - DOM is the internal map of HTML/XML doc
 - allows access and/or manipulation of document elements 
+
+[More DOM stuff](#dom-part-2)
 
 ## Javascript
 
@@ -64,7 +67,12 @@ Example of Baseball player structured in XML:
  ### What can Javascript do?
 
 - Control Browser features
-- Modify document appearance and content
+- Modify document appearance and content dynamically
+    - HTML elements
+    - HTML attributes
+    - CSS Styles
+    - Create new HTML events
+    - etc
 - Store and use info about user
 - Manipulate images
 - React to state of browser and client system
@@ -366,3 +374,83 @@ Then the init function and then whatever is inside of each event listener, in th
 >Try not to call anything that has not been intitialized beforehand!
 
 The complete example can be found in [JavaScript\Part2\Demo2.html](Part2/Demo2.html) for the complete HTML file.
+
+
+## DOM Part 2
+
+### Finding elements
+HTML Elements:
+```JavaScript
+document.getElementById(id) // find element by id
+document.getElementsByTagName(name) //find elements by tag name
+document.getElementsByClassName(name) //find elements by class name
+```
+Example:
+Returns all ```<p>``` elements with class="intro"
+``` JavaScript
+var x=document.querySelectorAll("p.intro");
+```
+
+You can use the (.) operator to access element attribute values
+```HTML
+<html>...
+    <img id=“myImage” src=“oldpic.jpg”> ...
+</html>
+<script>
+    var x=document.getElementById(‘myImage’);
+    x.src = “newpic.jpg”;
+</script>
+```
+### **Legacy Form Input Shortcute Accessor**
+```JavaScript
+var x = document.getElementsByTagName("form")[0]
+x.fullName //references the fullName text input
+x.address//refrences the address textarea input
+```
+
+### Properties of Nodes
+You can use these to access specific elements in a document as seen in the example below
+- ParentNode
+    - Can only be 1
+- childNodes[nodeNumber]
+    - Can be more than 1
+- firstChild
+- lastChild
+- nextSibling
+- previousSibling
+
+
+**Ex:**
+![DomTree](DomTree.png)
+In this example we can see what each function would access
+```JavaScript
+document.getElementsByTagName("h1")[0].parentNode
+//body element
+document.getElementsByTagName("html")[0].firstChild
+//head element
+document.getElementsByTagName("html")[0].lastChild
+//body element
+document.getElementsByTagName("h1")[0].previousSibling
+//a element
+document.getElementsByTagName("a")[0].nextSibling
+//h1 element
+```
+### DOM Collections
+-  groups of related objects on a page
+    - images, forms, and anchors
+- can access each individual item and use functions on them
+    ```JavaScript
+        documents.forms.length //number of forms in the page
+        documents.images[1] //second image in the page
+    ```
+### Changing HTML elements
+![ChangingElementsHTML](ChangingElementsHTML.png)
+### Adding elements
+![Alt text](AddingElements.png)
+### Adding Event handlers
+You can create and add event handlers such as the onclick event.
+```JavaScript
+docuemnt.getElementById(id).addEventListener("click", myFunction, false);
+document.getElementById(id).onclick = myFunction;
+```
+

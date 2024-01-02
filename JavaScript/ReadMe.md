@@ -452,6 +452,35 @@ document.getElementsByTagName("a")[0].nextSibling
 ![ChangingElementsHTML](ChangingElementsHTML.png)
 ### Adding elements
 ![Alt text](AddingElements.png)
+>^The element goes inside of ("") quotation marks inside of method parameter
+
+To add css classes to an element you can use the ```classList``` property which has an add property
+```HTML
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<style> 
+		.geek { 
+			background-color: green; 
+			font-size: 50px; 
+		} 
+	</style> 
+</head> 
+<body> 
+	<button onclick="myClass()">Try it</button> 
+
+	<div id="gfg">Geeks for Geeks</div> 
+	<script> 
+		function myClass() { 
+			var elem = document.getElementById("gfg"); 
+			// Adding class to div element 
+			elem.classList.add("geek"); 
+		} 
+	</script> 
+</body> 
+</html> 
+<!--Note: This was taken from GeeksForGeeks website-->
+```
 ### Adding Event handlers
 You can create and add event handlers such as the onclick event.
 ```JavaScript

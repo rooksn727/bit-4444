@@ -1,117 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Client-side input validation</title>
+        <style>
+            /*the CSS style applies to all html elements with class='error'*/
+            .error {
+                color: red;
+            }
+        </style>
 
-<head>
-    <title>Client-side input validation</title>
-    <style>
-        /*the CSS style applies to all html elements with class='error'*/
-        .error {
-            color: red;
-        }
-    </style>
+        <script type="text/javascript">
+            function checkInputs(event) {
+                //console.log("in the function");
+                var frmObject = document.forms[0];
+                var output = "Please correct the errors on the page.";
+                var checkError = false;
 
-    <script type="text/javascript">
-        function checkInputs(event) {
-            //console.log("in the function");
-            var frmObject = document.forms[0];
-            var output = "Please correct the errors on the page.";
-            var checkError = false;
+                //check the full name text box.
+                //If there is an error, set checkError to true and add a new text node for the error message
+                if (frmObject.fullName.value == "") {
+                    //update the checkError value to true
+                    checkError = true;
+                    //change the label element to red color
+                    var fname = frmObject.getElementsByTagName("div")[0];
+                    fname.classList.add("error");
+                    fname.style.fontWeight = "bold"; // TODO ADD BOLDING
+                    
+                    //add a new div element as a child node of the div element with id theName
+                    const fnamDiv = document.createElement("div");
+                    fnamDiv.innerText = "Please enter a name"
+                    fnamDiv.classList.add("Error"); //adds red and bolding
+                    document.getElementById("theName").appendChild(fnamDiv); //appends it to "theName" div
+                }
 
-            //check the full name text box.
-            //If there is an error, set checkError to true and add a new text node for the error message
-            if (frmObject.fullName.value == "") {
-                //update the checkError value to true
-                checkError = true;
+                //check the address text area
+                //If there is an error, set checkError to true and add a new text node for the error message
+                if(frmObject.address.value == "") {
+                    checkError = true;
 
-                //change the label element to red color
-               
+                }
 
-                //add a new div element as a child node of the div element with id theName
+                //check the gender radio button
+                //If there is an error, set checkError to true and add a new text node for the error message
+            
+
+                //check the major dropdown selection
+                //If there is an error, set checkError to true and add a new text node for the error message
+            
+
+                //check the year met input value
+                //If there is an error, set checkError to true and add a new text node for the error message
+            
+                //radio button helper function
+                function isUnCheckedRB(radiobuttonObj) {
+                    
+                    
+                }
+
+                //stop the event from continuing if errors exist
+                if (checkError) {
+                //Do something to prevent the thing from being sent, else have it go to success page
+                alert(output);
+                event.preventDefault();
+                return false;
+
+                }
+                else if (!checkError){
+                    alert("Input Validated");
+                    return true;
+                }
+                document.getElementById("output").innerHTML = "output";
+            }
+
+            function init() {
+                //specify the function checkInputs as the event listner for the submit event of the form element
+                //first get the reference to the form element
+                var form1 = document.getElementsByTagName("form")[0];
+                //then define an event handler for the submit event of the form object
+                form1.addEventListener("submit", checkInputs);
 
             }
 
-            //check the address text area
-            //If there is an error, set checkError to true and add a new text node for the error message
-           
+            //Define the DOMContentLoaded event handler, which will be triggered after the document finishes loading
+            document.addEventListener("DOMContentLoaded", init);
+        </script>
+    </head>
 
-            //check the gender radio button
-            //If there is an error, set checkError to true and add a new text node for the error message
-           
+    <body>
+        <h2>Let me know you, my friend!</h2>
+        <form name="myForm" method="post" action="success.html">
+            <br>
+            <div id="theName">
+                <strong>Full Name:</strong><br />
+                <input type="text" name="fullName" size="20" /><br />
+            </div>
 
-            //check the major dropdown selection
-            //If there is an error, set checkError to true and add a new text node for the error message
-           
+            <div id="theAddress">
+                <strong>Address:</strong><br />
+                <textarea name="address" rows="3" cols="25"></textarea><br />
+            </div>
 
-            //check the year met input value
-            //If there is an error, set checkError to true and add a new text node for the error message
-           
-
-
-            //stop the event from continuing if errors exist
-            if (checkError) {
-               
-
-            }
-            document.getElementById("output").innerHTML = "output";
-        }
-
-        function init() {
-            //specify the function checkInputs as the event listner for the submit event of the form element
-            //first get the reference to the form element
-            var form1 = document.getElementsByTagName("form")[0];
-            //then define an event handler for the submit event of the form object
-            form1.addEventListener("submit", checkInputs)
-
-        }
-
-        //Define the DOMContentLoaded event handler, which will be triggered after the document finishes loading
-        document.addEventListener("DOMContentLoaded", init);
-    </script>
-</head>
-
-<body>
-    <h2>Let me know you, my friend!</h2>
-    <form name="myForm" method="post" action="success.html">
-        <br>
-        <div id="theName">
-            <strong>Full Name:</strong><br />
-            <input type="text" name="fullName" size="20" /><br />
-        </div>
-
-        <div id="theAddress">
-            <strong>Address:</strong><br />
-            <textarea name="address" rows="3" cols="25"></textarea><br />
-        </div>
-
-        <div id="gender"><strong>Gender:</strong></div>
-        <div id="thegender">
-            <input type="radio" name="gender" value="male" />Male
-            <input type="radio" name="gender" value="female" />Female
-            <input type="radio" name="gender" value="other" />Other
-            <input type="radio" name="gender" value="notdisclosed" />Prefer not to say<br />
-        </div>
-        <br />
-        <div id="themajor"><strong>What is your major?</strong>
-            <select name="major">
-                <option value="" selected>Undecided</option>
-                <option value="ACIS">ACIS</option>
-                <option value="BIT">BIT</option>
-                <option value="FIN">Finance</option>
-                <option value="MKTG">Marketing</option>
-                <option value="MGT">Management</option>
-                <option value="HTM">Hospitality & Tourism Management</option>
-            </select>
-        </div>
-        <br />
-        <div id="year"><strong>What was the year when we first met?</strong>
-        </div>
-        <div id="theyear">
-            <input type="number" name="year" size="20" /><br />
-        </div>
-        <br>
-        <input type="submit" name="submit" value="Submit" />
-        <div id="output"></div>
-    </form>
-</body>
-
+            <div id="gender"><strong>Gender:</strong></div>
+            <div id="thegender">
+                <input type="radio" name="gender" value="male" />Male
+                <input type="radio" name="gender" value="female" />Female
+                <input type="radio" name="gender" value="other" />Other
+                <input type="radio" name="gender" value="notdisclosed" />Prefer not to say<br />
+            </div>
+            <br />
+            <div id="themajor"><strong>What is your major?</strong>
+                <select name="major">
+                    <option value="" selected>Undecided</option>
+                    <option value="ACIS">ACIS</option>
+                    <option value="BIT">BIT</option>
+                    <option value="FIN">Finance</option>
+                    <option value="MKTG">Marketing</option>
+                    <option value="MGT">Management</option>
+                    <option value="HTM">Hospitality & Tourism Management</option>
+                </select>
+            </div>
+            <br />
+            <div id="year"><strong>What was the year when we first met?</strong>
+            </div>
+            <div id="theyear">
+                <input type="number" name="year" size="20" /><br />
+            </div>
+            <br>
+            <input type="submit" name="submit" value="Submit" />
+            <div id="output"></div>
+        </form>
+    </body>
 </html>

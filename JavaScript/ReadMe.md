@@ -413,7 +413,7 @@ You can use these to access specific elements in a document as seen in the examp
 - ParentNode
     - Can only be 1
 - childNodes[nodeNumber]
-    - Can be more than 1
+    - Can be more than 1 hence have to specify which one
 - firstChild
 - lastChild
 - nextSibling

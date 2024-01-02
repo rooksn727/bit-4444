@@ -378,8 +378,13 @@ The complete example can be found in [JavaScript\Part2\Demo2.html](Part2/Demo2.h
 
 ## DOM Part 2
 
+Here is a goo resource that has all HTML DOM information: 
+*<u>[JavaScript and HTML DOM](https://www.w3schools.com/jsref/default.asp)</u>*
+
+
 ### Finding elements
 HTML Elements:
+
 ```JavaScript
 document.getElementById(id) // find element by id
 document.getElementsByTagName(name) //find elements by tag name

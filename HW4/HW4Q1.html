@@ -25,12 +25,12 @@
                     //change the label element to red color
                     var fname = frmObject.getElementsByTagName("div")[0];
                     fname.classList.add("error");
-                    fname.style.fontWeight = "bold"; // TODO ADD BOLDING
+                    frmObject.fullName.style.fontWeight = "bold"; 
                     
                     //add a new div element as a child node of the div element with id theName
                     const fnamDiv = document.createElement("div");
                     fnamDiv.innerText = "Please enter a name"
-                    fnamDiv.classList.add("Error"); //adds red and bolding
+                    fnamDiv.classList.add("error"); //adds red
                     document.getElementById("theName").appendChild(fnamDiv); //appends it to "theName" div
                 }
 
@@ -38,15 +38,42 @@
                 //If there is an error, set checkError to true and add a new text node for the error message
                 if(frmObject.address.value == "") {
                     checkError = true;
-
+                    var addr = frmObject.getElementsByTagName("div")[1]
+                    addr.classList.add("error");
+                    
+                    const addrDiv = document.createElement("div");
+                    addrDiv.innerText = "Please enter an address";
+                    addrDiv.classList.add("error");
+                    document.getElementById("theAddress").appendChild(addrDiv);
                 }
 
                 //check the gender radio button
                 //If there is an error, set checkError to true and add a new text node for the error message
-            
+                if(isUnCheckedRB(frmObject.gender)) {
+                    checkError = true;
+                    var checkRB = frmObject.getElementsByTagName("div")[3];
+                    checkRB.classList.add("error");
+
+                    const checkDiv = document.createElement("div");
+                    checkDiv.innerText = "Please check an Option";
+                    checkDiv.classList.add("error");
+                    document.getElementById("thegender").appendChild(checkDiv);
+                }
 
                 //check the major dropdown selection
                 //If there is an error, set checkError to true and add a new text node for the error message
+                if(frmObject.major.value == "") {
+                    checkError = true;
+                    var selectedVal = frmObject.getElementsByTagName("div")[4];
+                    selectedVal.classList.add("error");
+
+                    const checkSelect = document.createElement("div");
+                    checkSelect.innerText = "Please select an option";
+                    checkSelect.classList.add("error");
+                    document.getElementById("themajor").appendChild(checkSelect);
+                }
+
+                // dropdown checker
             
 
                 //check the year met input value
@@ -54,13 +81,16 @@
             
                 //radio button helper function
                 function isUnCheckedRB(radiobuttonObj) {
-                    
-                    
+                    anotherChecked = false;
+                    numRadio = radiobuttonObj.length;
+                    for (i=0; i<numRadio;i++) {
+                        if (radiobuttonObj[i].checked) {anotherChecked=true;}
+                    }
+                    if (!anotherChecked){return true;}
                 }
 
                 //stop the event from continuing if errors exist
                 if (checkError) {
-                //Do something to prevent the thing from being sent, else have it go to success page
                 alert(output);
                 event.preventDefault();
                 return false;
@@ -101,7 +131,7 @@
                 <textarea name="address" rows="3" cols="25"></textarea><br />
             </div>
 
-            <div id="gender"><strong>Gender:</strong></div>
+            <div id="gender1"><strong>Gender:</strong></div>
             <div id="thegender">
                 <input type="radio" name="gender" value="male" />Male
                 <input type="radio" name="gender" value="female" />Female

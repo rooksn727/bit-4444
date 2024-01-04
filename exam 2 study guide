@@ -14,7 +14,12 @@ Test 2 Review
 • What is DOM
   - Document Object Model
     - Both HTML and XML are specified in DOM
-    - DOM has a hierarchical tree structure
+    - Is an internal map of the HTML/XML document
+      - the root element is still <html>
+    - it allows us to access or manipulate a document's elements when writing programs (e.g., JavaScript)
+
+• Node relations (parent, child, sibling, ancestor)
+- DOM has a hierarchical tree structure
        - The top level is the document object
        - Each element name is represented by a node
        - A node that contains other nodes is called a parent node
@@ -23,25 +28,43 @@ Test 2 Review
        - A node’s descendant nodes include its children, its children’s children and so on
        - A node’s ancestor nodes include its parent, its parent’s parent and so on
 
-• Node relations (parent, child, sibling, ancestor)
-
-
 2) JavaScript
 • Differences between JavaScript and Java
+  
   - JavaScript
       - needs a browser
       - client side execution
       - HTML element used to specify JavaScript code is script
-      
-  - Java
-      - executing java code needs a java virtual machine
-      - 
+   
+    - Main Differences:
+      - no graphical UI
+      - No read/write file access on clients
+      - Not a class-based object model
+      - No multithreading
+      - Do not need the Java VM (needs a browser to operate)
       
 • What JavaScript can do and when to use JavaScript
-  -
+  - Client-side:
+ Control browser features
+ Modify document appearance
+ Modify document content
+ Store & use information about user
+ Manipulate images
+ React to state of browser and client system
+ More
+
   
 • Where to put JavaScript code
-  -
+  - Embedded into HTML
+      - can be inserted anywhere in the HTML file, including the body
+      - There are no limits on how many <script> tags can be embedded in the HTML code of a web page.
+Example: 
+  <head>
+    <title>JavaScriptEx</title>
+    <script type="
+
+  - Putting the JavaScript in its own local file
+      - 
   
 • JavaScript language essentials (variables, dynamic data types, operators, 
 strings, control structures, input and output)

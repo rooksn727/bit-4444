@@ -46,14 +46,13 @@ Test 2 Review
       
 • What JavaScript can do and when to use JavaScript
   - Client-side:
-       Control browser features
-       Modify document appearance
-       Modify document content
-       Store & use information about user
-       Manipulate images
-       React to state of browser and client system
-       More
-
+      - Control browser features
+      - Modify document appearance
+      - Modify document content
+      - Store & use information about user
+      - Manipulate images
+      - React to state of browser and client system
+ 
   
 • Where to put JavaScript code
   - Embedded into HTML
@@ -200,9 +199,53 @@ strings, control structures, input and output)
       - <!-- Multiple line HTML comment -->
    
 
-• JavaScript functions, arrays, events, the window object, and the document 
-object
-  -
+• JavaScript functions, arrays, events, the window object, and the document object
+
+  - Built-in functions
+      -  JavaScript provides several objects that have a rich collection of methods for performing common math calculations, string manipulations, date and time manipulations, and manipulations of collections of data called arrays
+
+  - Programmer defined functions
+      - You can define programmer-defined functions that perform specific tasks
+
+  - Functions are objects
+      - A function can be considered as an object and referenced by a variable
+      -     e.g., var obj = function(){console.log("Hello");};
+      - A function without a name is an anonymous function
+      - A function can be used as an argument to another function
+      -     e.g., window.setTimeOut(obj, 5000);
+   
+   - Arrays
+      - An array is a group of variables that have the same name and normally are of the same type
+      - Each individual location is called an element
+      - We may refer to any one of these elements by giving the array’s name followed by the position number of the element in square brackets ([])
+      - The first element in every array is the zeroth element.
+      - The ith element of array cis referred to as c[i-1].
+      - Every array in JavaScript knows its own length, which it stores in its length attribute and can be found with the expression arrayname.length
+      - JavaScript arrays are Arrayobjects.
+      - You use the new operator to create an array and to specify the number of elements in an array.
+      -     E.g., var n1= new Array(3); var n3 = new Array(); var n2 = ["Ford", "Toyota", "Honda"];
+   - Array Methods
+      - push(): adds new element to the end of array
+      - pop(): removes last element in array and returns the removed element
+      - shift(): removes first element in array and returns the removed element
+      - concat(): concatenates two arrays into one
+      - sort(): sorts an array
+      - indexOf(): search array for an element and returns its position index
+      -      Example:
+      -      var nums = [5, 3, 6, 2];
+      -      nums.push(1);
+      -      console.log(nums);     //[5,3,6,2,1]
+      -      console.log(nums.pop());     //1
+      -      console.log(nums);     //[5,3,6,2]
+      -      console.log(nums.shift());    //5
+      -      console.log(nums);     //[3,6,2]
+      -      console.log(nums.concat([3,5]));     //[3,6,2,3,5]
+      -      console.log(nums.sort());     //[2,3,6]
+      -      console.log(nums.indexOf(6));     //2
+    
+   - Events
+      - 
+
   
 • JavaScript and DOM (finding HTML elements and attributes, DOM 
 collections, making changes to HTML elements, adding event handlers)

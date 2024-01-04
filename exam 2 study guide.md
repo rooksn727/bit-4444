@@ -1,11 +1,12 @@
 BIT4444, Winter
 Test 2 Review
 1. Format:
-• Closed-book, closed-notes
-• 20 multiple-choice/true-false questions (40%)
-• 10 short answer questions (20%)
-• 2 JavaScript/jQuery/Bootstrap fill-in-the-blanks questions (20%)
-• 2 JavaScript/jQuery programming questions (20%)
+
+- Closed-book, closed-notes
+- 20 multiple-choice/true-false questions (40%)
+- 10 short answer questions (20%)
+    - 2 JavaScript/jQuery/Bootstrap fill-in-the-blanks questions (20%)
+    - 2 JavaScript/jQuery programming questions (20%)
 
 
 4. Major Topics
@@ -20,13 +21,13 @@ Test 2 Review
 
 • Node relations (parent, child, sibling, ancestor)
 - DOM has a hierarchical tree structure
-       - The top level is the document object
-       - Each element name is represented by a node
-       - A node that contains other nodes is called a parent node
-       - A parent node can have many children, but a child node can have only one parent node 
-       - Nodes that are peers are called sibling nodes
-       - A node’s descendant nodes include its children, its children’s children and so on
-       - A node’s ancestor nodes include its parent, its parent’s parent and so on
+  - The top level is the document object
+  - Each element name is represented by a node
+  - A node that contains other nodes is called a parent node
+  - A parent node can have many children, but a child node can have only one parent node 
+  - Nodes that are peers are called sibling nodes
+  - A node’s descendant nodes include its children, its children’s children and so on
+  - A node’s ancestor nodes include its parent, its parent’s parent and so on
 
 2) JavaScript
 • Differences between JavaScript and Java
@@ -56,30 +57,32 @@ Test 2 Review
   
 • Where to put JavaScript code
   - Embedded into HTML
-      - can be inserted anywhere in the HTML file, including the body
-      - There are no limits on how many <script> tags can be embedded in the HTML code of a web page.
-            
-            Example: 
-              <head>
-                <title>JavaScriptEx</title>
-                <script type="text/javascript">
-                      ***Where the code goes***
-                </script>
-              </head>
-              <body>
+    - can be inserted anywhere in the HTML file, including the body
+    - There are no limits on how many ```<script>``` tags can be embedded in the HTML code of a web page.
+    - Example: 
+    ``` HTML
+    <head>
+      <title>JavaScriptEx</title>
+      <script type="text/javascript">
+            ***Where the code goes***
+      </script>
+    </head>
+    <body>
+    ```
 
   - Putting the JavaScript in its own local file
       - THIS IS THE BEST WAY FOR CODE REUSE
       - use of src: src = specify URL of external code source
       - use of type: type = specifies scripting language
- 
-              Example:
-              <head>
-                <title>JavaEx</title>
-                <scrpit src="inputValidator.js"
-                        type="text/javascript"></script>
-
-                        
+      
+Example:
+```JavaScript
+<head>
+  <title>JavaEx</title>
+  <scrpit src="inputValidator.js"
+          type="text/javascript"></script>
+</head>
+```             
   
 • JavaScript language essentials (variables, dynamic data types, operators, 
 strings, control structures, input and output)
@@ -96,13 +99,15 @@ collections, making changes to HTML elements, adding event handlers)
 
 3) jQuery
 • What is jQuery and its advantages over JavaScript?
-  -
+  - Simpler and easier to read code
   
 • How to use jQuery (only those keywords shown in the slides)
-  -
+  - ```$(selector:Filter).action()```
+
   
 • selectors, filters, HTML manipulation methods
-  - 
+  - ```$("tagname") ``` all tag name
+  - ```$("tag1, tag2")``` tag1 and tag2
   
 • events
   -

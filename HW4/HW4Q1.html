@@ -60,6 +60,16 @@
                     document.getElementById("thegender").appendChild(checkDiv);
                 }
 
+                //radio button helper function
+                function isUnCheckedRB(radiobuttonObj) {
+                    anotherChecked = false;
+                    numRadio = radiobuttonObj.length;
+                    for (i=0; i<numRadio;i++) {
+                        if (radiobuttonObj[i].checked) {anotherChecked=true;}
+                    }
+                    if (!anotherChecked){return true;}
+                }
+
                 //check the major dropdown selection
                 //If there is an error, set checkError to true and add a new text node for the error message
                 if(frmObject.major.value == "") {
@@ -73,20 +83,22 @@
                     document.getElementById("themajor").appendChild(checkSelect);
                 }
 
-                // dropdown checker
-            
+                
 
                 //check the year met input value
-                //If there is an error, set checkError to true and add a new text node for the error message
-            
-                //radio button helper function
-                function isUnCheckedRB(radiobuttonObj) {
-                    anotherChecked = false;
-                    numRadio = radiobuttonObj.length;
-                    for (i=0; i<numRadio;i++) {
-                        if (radiobuttonObj[i].checked) {anotherChecked=true;}
-                    }
-                    if (!anotherChecked){return true;}
+                //If there is an error, set checkError to true and add a new text node for the error messag
+                // dropdown checker
+                if (frmObject.year.value == "0" ||frmObject.year.value < "2000" || frmObject.year.value > "2023") {
+                    checkError = true;
+                    var yearMet = frmObject.getElementsByTagName("div")[5];
+                    yearMet.classList.add("error");
+
+                    const checkYear = document.createElement("div");
+                    if (frmObject.year.value == ""){checkYear.innerText = "Please enter a Year!";}
+                    if (frmObject.year.value < 2000 || frmObject.year.value > 2023) {checkYear.innerText = "Please enter a year between 2000-2023!"}
+                    checkYear.classList.add("error");
+                    document.getElementById("theyear").appendChild(checkYear);
+                    
                 }
 
                 //stop the event from continuing if errors exist

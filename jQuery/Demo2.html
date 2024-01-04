@@ -29,9 +29,8 @@
 					$("#current-time").addClass("red");
 				}
 			})
-		})
 
-		function updateTime(){
+			function updateTime(){
 			var d = new Date();
 			var hours = d.getHours();
 			minutes = d.getMinutes();
@@ -46,7 +45,10 @@
 				ampm='PM';
 
 			$("#current-time").text(hours + ":" + minutes + ":" + secondsFixed + " " + ampm);
-		}
+			}
+		})
+
+		
 	</script>
 </head>
 <body>

@@ -1,0 +1,63 @@
+BIT4444, Winter
+Test 2 Review
+1. Format:
+• Closed-book, closed-notes
+• 20 multiple-choice/true-false questions (40%)
+• 10 short answer questions (20%)
+• 2 JavaScript/jQuery/Bootstrap fill-in-the-blanks questions (20%)
+• 2 JavaScript/jQuery programming questions (20%)
+
+
+4. Major Topics
+
+1) DOM
+• What is DOM
+• Node relations (parent, child, sibling, ancestor)
+
+
+2) JavaScript
+• Differences between JavaScript and Java
+  - JavaScript
+      - needs a browser
+      - client side execution
+      - HTML element used to specify JavaScript code is script
+      
+  - Java
+      - executing java code needs a java virtual machine
+      - 
+      
+• What JavaScript can do and when to use JavaScript
+  -
+  
+• Where to put JavaScript code
+  -
+  
+• JavaScript language essentials (variables, dynamic data types, operators, 
+strings, control structures, input and output)
+  -
+  
+• JavaScript functions, arrays, events, the window object, and the document 
+object
+  -
+  
+• JavaScript and DOM (finding HTML elements and attributes, DOM 
+collections, making changes to HTML elements, adding event handlers)
+  -
+  
+
+3) jQuery
+• What is jQuery and its advantages over JavaScript?
+  -
+  
+• How to use jQuery (only those keywords shown in the slides)
+  -
+  
+• selectors, filters, HTML manipulation methods
+  - 
+  
+• events
+  -
+  
+• manipulating CSS
+  -
+  

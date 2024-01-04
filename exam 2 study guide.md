@@ -177,6 +177,7 @@ strings, control structures, input and output)
                - for(statement 1; condition; statement 2){
                    //loop code goes here
                };
+
   - String Operators
       - string concatenation (+)
    
@@ -191,6 +192,7 @@ strings, control structures, input and output)
       - Debug
             - console.log()
             - console.error()
+        
   - Comment Tags
       - //JavaScript comment
       - /* Multiple line Java comment */

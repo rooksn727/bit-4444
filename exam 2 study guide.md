@@ -230,10 +230,62 @@ collections, making changes to HTML elements, adding event handlers)
   ```
   
 • manipulating CSS
-  -
+  - 
   
 
 ## DOM and intro to JavaScript study material:
+
+You can use the (.) operator to access element attribute values
+```HTML
+<html>...
+    <img id=“myImage” src=“oldpic.jpg”> ...
+</html>
+<script>
+    var x=document.getElementById(‘myImage’);
+    x.src = “newpic.jpg”;
+</script>
+```
+### **Legacy Form Input Shortcute Accessor**
+```JavaScript
+var x = document.getElementsByTagName("form")[0]
+x.fullName //references the fullName text input
+x.address//refrences the address textarea input
+```
+
+### DOM Collections
+-  groups of related objects on a page
+    - images, forms, and anchors
+- can access each individual item and use functions on them
+    ```JavaScript
+        documents.forms.length //number of forms in the page
+        documents.images[1] //second image in the page
+    ```
+To add css classes to an element you can use the ```classList``` property which has an add property
+```HTML
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<style> 
+		.geek { 
+			background-color: green; 
+			font-size: 50px; 
+		} 
+	</style> 
+</head> 
+<body> 
+	<button onclick="myClass()">Try it</button> 
+	<div id="gfg">Geeks for Geeks</div> 
+	<script> 
+		function myClass() { 
+			var elem = document.getElementById("gfg"); 
+			// Adding class to div element 
+			elem.classList.add("geek"); 
+		} 
+	</script> 
+</body> 
+</html> 
+<!--Note: This was taken from GeeksForGeeks website-->
+```
 
 _____________ documents are specified in the Document Object Model (DOM).
   - HTML and XML 

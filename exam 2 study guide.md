@@ -244,9 +244,51 @@ strings, control structures, input and output)
       -      console.log(nums.indexOf(6));     //2
     
    - Events
-      - 
+      - JavaScript events
+        - Allow scripts to respond to user interactions and modify the page accordingly
+      - Events and event handling
+        - Help make web applicaitons more dynamic and interactive
+       
+      - loadEvent
+        -  The windowobject’s loadevent fires when the window finishes loading successfully
+          - i.e., all its children are loaded and all external files referenced by the page are loaded
+          - Different from the Form.Load event in VB.NET!
+        - Every DOM element has a loadevent, but it’s most commonly used on the window object.
+        - An event handler is a function that responds to an event.
+        - Assigning an event handler to an event on a DOM node is called registering an event handler
+        - Method addEventListenercan be called multiple times on a DOM node to register more than one event-handling method for an event.
+        - If a script in the head attempts to get a DOM node for an HTML element in the body, getElementById returns null because the bodyhas not yet loaded
+        - Two old models for registering event handlers:
+          - Inline model treats events as attributes of HTML elements
+          - Traditional model assigns the name of the function to the event property of a DOM node
+        - The inline model places calls to JavaScript functions directly in HTML code.
+        - The following code indicates that JavaScript function start should be called when the bodyelement loads:
+          - <body onload = "start()">
+        - The traditional model uses a property of an object to specify an event handler.
+        - The following JavaScript code indicates that function start should be called when document loads:
+          - document.onload = "start()";
+ 
+     - Mouseover event
+         - when the mouse cursor enters an element
+     - Mouseout event                                    For both of these events: if CSS can do these, leave them to CSS
+         - mouse coursor leaves the element
 
-  
+  - Window Object
+      - The window object represents an open window in a browser
+      - If a document contains frames (<iframe> tag), there is a window object for the HTML document, and one additional window for each frame
+      - Methods:
+        - alert(): display an alert message and an OK butotn
+        - setTimeout(): call a function a specified number of miliseconds
+        - setInterval(): call a function at the specified interval in miliseconds
+
+   - Document Object
+     - The root of an HTML document
+     - Methods:
+       - getElementById(): returns the value of the element at the specified id
+       - writeln(): writes a line of output to the document (adds a new line at the end)
+       - write(): writes output to the document    
+
+
 • JavaScript and DOM (finding HTML elements and attributes, DOM 
 collections, making changes to HTML elements, adding event handlers)
   -

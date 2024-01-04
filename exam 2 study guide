@@ -110,3 +110,105 @@ collections, making changes to HTML elements, adding event handlers)
 • manipulating CSS
   -
   
+
+
+
+
+
+
+
+DOM and intro to JavaScript study material:
+
+_____________ documents are specified in the Document Object Model (DOM).
+  - HTML and XML 
+ 
+
+Which of the following statement is wrong?
+  - Both JavaScript and Java can access local files 
+  
+ 
+
+A JavaScript variable name cannot have a/an _______________.
+  - space 
+  
+What is the value of b after executing the following code?
+var a = 8;
+var b=++a;
+  - 9 
+ 
+ 
+What is the value of b after executing the following code?
+var a = 8
+var b = "2" + 8
+  - "28" 
+  
+ 
+JavaScript is mainly used for _________________.
+  - client side execution 
+  
+
+The HTML element used to specify JavaScript code is __________.
+  - script 
+ 
+
+JavaScript can replace CSS because it can achieve more advanced functionalities. 
+  - False 
+  
+ 
+
+XML tags are case insensitive.
+  - False 
+ 
+JavaScript is case-sensitive.
+  - True 
+ 
+
+Which one of the following is not a JavaScript object that provides a rich collections of method?
+  - form 
+  
+ 
+
+Which of the following keyword is used to define a JavaScript function?
+  - function 
+  
+ 
+
+A JavaScript function without a name is called a _____________.
+  - anonymous function 
+ 
+
+In JavaScript, when we refer an array element, we use the array's name followed by the position index of the element in ____________.
+  - [ ] 
+
+ 
+
+Which one of the following array methods removes the last element in array and returns the removed element?
+  - pop() 
+
+In JavaScript, the window object's load event fires ________ all its children elements are loaded and all external files references are loaded.
+  - after 
+ 
+
+Which one of the following event registration method can register more than one event handler for the load event?
+  - addEventListener("load", start, false) 
+ 
+
+When the user puts the mouse cursor over an image element, the image's ___________ event will fire.
+  - mouseover 
+  
+
+In JavaScript, a variable cannot be used to reference a function.
+  - False 
+ 
+
+In JavaScript, a function can be defined within another function.
+  - True 
+
+
+
+
+
+
+
+
+

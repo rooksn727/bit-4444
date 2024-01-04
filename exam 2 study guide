@@ -12,6 +12,17 @@ Test 2 Review
 
 1) DOM
 • What is DOM
+  - Document Object Model
+    - Both HTML and XML are specified in DOM
+    - DOM has a hierarchical tree structure
+       - The top level is the document object
+       - Each element name is represented by a node
+       - A node that contains other nodes is called a parent node
+       - A parent node can have many children, but a child node can have only one parent node 
+       - Nodes that are peers are called sibling nodes
+       - A node’s descendant nodes include its children, its children’s children and so on
+       - A node’s ancestor nodes include its parent, its parent’s parent and so on
+
 • Node relations (parent, child, sibling, ancestor)
 
 

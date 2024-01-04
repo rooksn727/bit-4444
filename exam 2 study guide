@@ -45,26 +45,41 @@ Test 2 Review
       
 • What JavaScript can do and when to use JavaScript
   - Client-side:
- Control browser features
- Modify document appearance
- Modify document content
- Store & use information about user
- Manipulate images
- React to state of browser and client system
- More
+       Control browser features
+       Modify document appearance
+       Modify document content
+       Store & use information about user
+       Manipulate images
+       React to state of browser and client system
+       More
 
   
 • Where to put JavaScript code
   - Embedded into HTML
       - can be inserted anywhere in the HTML file, including the body
       - There are no limits on how many <script> tags can be embedded in the HTML code of a web page.
-Example: 
-  <head>
-    <title>JavaScriptEx</title>
-    <script type="
+            
+            Example: 
+              <head>
+                <title>JavaScriptEx</title>
+                <script type="text/javascript">
+                      ***Where the code goes***
+                </script>
+              </head>
+              <body>
 
   - Putting the JavaScript in its own local file
-      - 
+      - THIS IS THE BEST WAY FOR CODE REUSE
+      - use of src: src = specify URL of external code source
+      - use of type: type = specifies scripting language
+ 
+              Example:
+              <head>
+                <title>JavaEx</title>
+                <scrpit src="inputValidator.js"
+                        type="text/javascript"></script>
+
+                        
   
 • JavaScript language essentials (variables, dynamic data types, operators, 
 strings, control structures, input and output)

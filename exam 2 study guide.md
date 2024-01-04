@@ -194,22 +194,22 @@ strings, control structures, input and output)
             - console.error()
         
   - Comment Tags
+  ```
       - //JavaScript comment
       - /* Multiple line Java comment */
       - <!-- HTML comment -->
       - <!-- Multiple line HTML comment -->
+  ```
    
 
 • JavaScript functions, arrays, events, the window object, and the document 
 object
-  -
   
 • JavaScript and DOM (finding HTML elements and attributes, DOM 
 collections, making changes to HTML elements, adding event handlers)
-  -
-  
 
-3) jQuery
+
+3. jQuery
 • What is jQuery and its advantages over JavaScript?
   - Simpler and easier to read code
   
@@ -222,19 +222,18 @@ collections, making changes to HTML elements, adding event handlers)
   - ```$("tag1, tag2")``` tag1 and tag2
   
 • events
-  -
+  - has the same events as regular JS
+  - the only difference is the format
+  ```JavaScript
+  $("p").event(function(){...})
+
+  ```
   
 • manipulating CSS
   -
   
 
-
-
-
-
-
-
-***DOM and intro to JavaScript study material:***
+## DOM and intro to JavaScript study material:
 
 _____________ documents are specified in the Document Object Model (DOM).
   - HTML and XML 
@@ -301,7 +300,7 @@ In JavaScript, a function can be defined within another function.
   - True 
 
 
-*** Javascript and Jquery study material: ***
+## Javascript and Jquery study material:
 
 The Document Object Model provides scripting access to _________ on a web page.
   - all the elements 
@@ -315,16 +314,19 @@ In an html page's DOM tree, a node can have _____________ child node(s) and ____
 Which of the following document methods returns a single element object?
   - getElementById() 
 
-Given this html page,
+Given this html page:
+```HTML
 <html>
    ...
    <img id="myImage" src="oldpic.jpg">
    ...
 </html>
+```
 What of the following statements can correctly access the <img> element's src attribute value?
   - document.getElementById("myImage").src 
 
 What is the correct way to access the first <p>element in this html page?
+```HTML
 <html>
    ...
    <p> Monday </p>
@@ -332,9 +334,12 @@ What is the correct way to access the first <p>element in this html page?
    <p> Wednesday </p>
    ...
 </html>
-  - document.getElementsByTagName("p")[0] 
+```
+
+  - ```document.getElementsByTagName("p")[0] ```
   
-In the following html DOM tree, the <h1> element is the ____________ of the <a> element.
+In the following html DOM tree, the ```<h1>``` element is the ____________ of the ```<a>``` element.
+```
 <html> element
 |-----<head> element
 |            |-----<title> element
@@ -342,19 +347,20 @@ In the following html DOM tree, the <h1> element is the ____________ of the <a> 
 |-----<body> element
              |-----<a> element
              |-----<h1> element
-  
+```
    - nextSibling 
   
  Which of the following is not a valid DOM collection?
   - tables 
 
-Which of the following is the correct syntax for modifying the content of this <p> element?
+Which of the following is the correct syntax for modifying the content of this ```<p>``` element?
+
+```HTML
 <html>
-   ...
    <p id="newp"> content to be modified </p>
-   ...
 </html>
-  - getElementById("newp").innerHTML = "new content" 
+```
+  - ```getElementById("newp").innerHTML = "new content" ```
  
 The html node in a DOM tree is the parent or ancestor node of any HTML element within the page. 
   - True 
@@ -365,25 +371,25 @@ The html node in a DOM tree is the parent or ancestor node of any HTML element w
 Which one of the following is not a core feature in jQuery?
   - storing structured data 
   
-In the jQuery syntax, $(selector:filter).action(), the $ sign represents _____________.
+In the jQuery syntax, ```$(selector:filter).action()```, the $ sign represents _____________.
   - a jQuery object 
  
-In the jQuery syntax, $(selector:filter).action(), the selector is used to _____________.
+In the jQuery syntax, ```$(selector:filter).action()```, the selector is used to _____________.
   - select html elements 
    
-A jQuery, $("p"), selects ______________.
+A jQuery, ```$("p")```, selects ______________.
   - all paragraph elements 
   
-A jQuery, $(":text"), selects _______________.
+A jQuery, ```$(":text")```, selects _______________.
   - all form elements with type="text" 
  
 Which of the following event handlers can correctly handle a click event on an element with an id value="starter"?
-  - $("#starter").click(function(){ ... }) 
+  - ```$("#starter").click(function(){ ... }) ```
  
 jQuery can achieve what JavaScript can do with less coding.
   - True 
    
-The html <style> tag is used to reference the jQuery library.
+The html ```<style>``` tag is used to reference the jQuery library.
    - False 
  
 jQuery can completely separate JavaScript from HTML.

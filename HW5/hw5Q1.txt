@@ -1,0 +1,26 @@
+1. List all supplier ids (no duplicates) for all products.
+    SELECT DISTINCT SupplierID FROM suppliers;
+2. List the product name and supplier id for all products that cost more than $20.
+    SELECT DISTINCT suppliers.SupplierID, products.ProductName
+    FROM suppliers, products
+    WHERE suppliers.SupplierID = products.SupplierID  AND products.UnitPrice > 20;
+3. List all products whose names start with letter "c" and are not discontinued.
+    SELECT products.ProductName , products.Discontinued
+    FROM products
+    WHERE products.ProductName LIKE 'c%' AND Discontinued = 0;
+4. List each country name and the number of suppliers located in the country.
+    SELECT suppliers.Country, COUNT(SupplierID) 
+    FROM suppliers
+    GROUP BY suppliers.Country;
+5. Find all suppliers' name, city, and country for those who provide non-discontinued products.
+    SELECT s.CompanyName, s.City, s.Country
+    FROM suppliers AS S, products
+    WHERE s.supplierID = products.supplierID AND products.discontinued=1;
+6. Add a new product record to the products table. You must provide values for the following fields 
+in the new product record: ProductID, productName, SupplierID, and CategoryID.
+    INSERT INTO products(ProductID,ProductName,SupplierID,CategoryID)VALUES(26,'Cheerios',24,5);
+7. Increase the reorder level by 20% and reduce the prices by 10% for all products
+    UPDATE products
+    SET ReorderLevel = ReorderLevel*1.2,UnitPrice = UnitPrice*.9;
+8. Delete discontinued products.
+    DELETE FROM products WHERE Discontinued = 1;
